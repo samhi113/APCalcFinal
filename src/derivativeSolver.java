@@ -9,27 +9,46 @@ public class derivativeSolver {
      */
 
     static JFrame frame = new JFrame();
-    static JPanel panel = new JPanel();
-    static JTextField xFactor5Input, xFactor4Input, xFactor3Input, xFactor2Input, xFactor1Input, doesntMatterMuch;
+    static JPanel panel1, panel2 = new JPanel();
+    static JTextField xFactor5Input, xFactor4Input, xFactor3Input, xFactor2Input, xFactor1Input, doesntMatterMuch = new JTextField(3);
     static JLabel problemLabel = new JLabel("x⁵ +      x⁴ +      x³ +      x² +      x +");
+    static JButton submitButton = new JButton("Submit");
+    static JButton returnButton = new JButton("Return");
 
     public static void main(String[] args) {
         JOptionPane.showMessageDialog(null, "This program solves derivatives (Max power of 5)");
 
-        createTextFields();
+        displayFirstScreen();
 
     }
 
-    public static void createTextFields(){
-        System.out.println("running createTextFields function");
+    public static void displayFirstScreen(){
+        frame.setSize(700, 300);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
 
-        xFactor5Input = new JTextField(3);
-        xFactor4Input = new JTextField(3);
-        xFactor3Input = new JTextField(3);
-        xFactor2Input = new JTextField(3);
-        xFactor1Input = new JTextField(3);
-        doesntMatterMuch = new JTextField(3);
+        //submitButton.addActionListener(new submitListener());
+        submitButton.setBounds(500, 150, 75, 25);
 
-        System.out.println("Text fields created successfully");
+        problemLabel.setBounds(75, 100, 500, 25);
+
+        xFactor5Input.setLocation(50, 100);
+        xFactor4Input.setLocation(150, 100);
+        xFactor3Input.setLocation(250, 100);
+        xFactor2Input.setLocation(350, 100);
+        xFactor1Input.setLocation(450, 100);
+        doesntMatterMuch.setLocation(550, 100);
+
+        panel1.add(submitButton);
+        panel1.add(problemLabel);
+        panel1.add(xFactor5Input);
+        panel1.add(xFactor4Input);
+        panel1.add(xFactor3Input);
+        panel1.add(xFactor2Input);
+        panel1.add(xFactor1Input);
+        panel1.add(doesntMatterMuch);
+
+        frame.add(panel1);
+        frame.setVisible(true);
     }
 }
