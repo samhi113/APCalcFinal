@@ -71,7 +71,7 @@ public class derivativeSolverGUI {
 
             if (xFactor5 != 0.0){
                 notFirstNum = true;
-                finalOutput += xFactor5 * 5;
+                finalOutput += xFactor5 * 5.0;
                 finalOutput += "x⁴";
             }
             if (xFactor4 != 0.0){
@@ -79,28 +79,28 @@ public class derivativeSolverGUI {
                     finalOutput += "+";
             }
 
-                finalOutput += xFactor5 * 4;
+                finalOutput += xFactor5 * 4.0;
                 finalOutput += "x³";
             }
             if (xFactor3 != 0.0){
                 if (notFirstNum){
                     finalOutput += "+";
                 }
-                finalOutput += xFactor5 * 3;
+                finalOutput += xFactor5 * 3.0;
                 finalOutput += "x²";
             }
             if (xFactor2 != 0.0){
                 if (notFirstNum){
                     finalOutput += "+";
                 }
-                finalOutput += xFactor5 * 2;
+                finalOutput += xFactor5 * 2.0;
                 finalOutput += "x";
             }
             if (xFactor1 != 0.0){
                 if (notFirstNum){
                     finalOutput += "+";
                 }
-                finalOutput += xFactor5 * 1;
+                finalOutput += xFactor5 * 1.0;
             }
             JOptionPane.showMessageDialog(null, finalOutput);
         }
