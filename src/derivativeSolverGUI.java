@@ -100,7 +100,7 @@ public class derivativeSolverGUI {
                 if (notFirstNum){
                     finalOutput += "+";
                 }
-                finalOutput += xFactor5 * 1.0;
+                finalOutput += xFactor5;
             }
             JOptionPane.showMessageDialog(null, finalOutput);
         }
