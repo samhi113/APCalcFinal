@@ -76,33 +76,62 @@ public class derivativeSolverGUI {
             }
             if (xFactor4 != 0.0){
                 if (notFirstNum){
-                    finalOutput += "+";
-            }
+                    if (xFactor4 > 0){
+                        finalOutput += "+";
+                    } else {
+                        finalOutput += "-";
+                    }
 
-                finalOutput += xFactor5 * 4.0;
+                } else {
+                    notFirstNum = false;
+                }
+                finalOutput += Math.abs(xFactor4) * 4.0;
                 finalOutput += "x³";
             }
             if (xFactor3 != 0.0){
                 if (notFirstNum){
-                    finalOutput += "+";
+                    if (xFactor3 > 0){
+                        finalOutput += "+";
+                    } else {
+                        finalOutput += "-";
+                    }
+
+                } else {
+                    notFirstNum = false;
                 }
-                finalOutput += xFactor5 * 3.0;
+                finalOutput += Math.abs(xFactor3) * 3.0;
                 finalOutput += "x²";
             }
+
             if (xFactor2 != 0.0){
                 if (notFirstNum){
-                    finalOutput += "+";
+                    if (xFactor2 > 0){
+                        finalOutput += "+";
+                    } else {
+                        finalOutput += "-";
+                    }
+
+                } else {
+                    notFirstNum = false;
                 }
-                finalOutput += xFactor5 * 2.0;
+                finalOutput += Math.abs(xFactor2) * 2.0;
                 finalOutput += "x";
             }
             if (xFactor1 != 0.0){
                 if (notFirstNum){
-                    finalOutput += "+";
+                    if (xFactor1 > 0){
+                        finalOutput += "+";
+                    } else {
+                        finalOutput += "-";
+                    }
+
+                } else {
+                    notFirstNum = false;
                 }
-                finalOutput += xFactor5;
+                finalOutput += Math.abs(xFactor1);
             }
             JOptionPane.showMessageDialog(null, finalOutput);
+            System.exit(0);
         }
     }
 
